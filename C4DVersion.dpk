@@ -1,0 +1,43 @@
+package C4DVersion;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  C4D.Version.Info in 'Src\C4D.Version.Info.pas',
+  C4D.Version.Utils in 'Src\C4D.Version.Utils.pas',
+  C4D.Version.Types in 'Src\C4D.Version.Types.pas',
+  C4D.Version.Consts in 'Src\C4D.Version.Consts.pas',
+  C4D.Version.Interfaces in 'Src\C4D.Version.Interfaces.pas',
+  C4D.Version in 'Src\C4D.Version.pas',
+  C4D.Version.SemanticVersion in 'Src\C4D.Version.SemanticVersion.pas';
+
+end.
