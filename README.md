@@ -49,6 +49,8 @@ boss install github.com/Code4Delphi/C4D-Version
 ## 🚀 Como usar
 * Adcione os dados da versão do seu sistema, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
 
+![Tela-Version-Info-Delphi.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Version-Info-Delphi.png)
+
 * Adicione a uses a seu sistema:
 ```
 uses
@@ -149,10 +151,21 @@ begin
    LVersao := TC4DVersion.Info('C:\Program Files (x86)\Embarcadero\Studio\20.0\bin\bds.exe');
 ```
 
+## ⌨️ Demo
+* Juntos aos fontes do projetos, você encontrara um projeto teste, na pasta:
+```
+..\C4D-Version\Samples\Demo01
+```
+![Tela-Demo.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Demo.png)
 
-## Vantagens em se utilizar o Version Info do Delphi
+
+
+## ⭐ Vantagens em se utilizar o Version Info do Delphi
 * Os dados da versão são inseridos no .exe, como isso ao repousar o mouse sobre nosso arquivos .exe, os dados da versão e informações do produto são exibidos:
 
+![Dados-da-versao-no-Hint-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Dados-da-versao-no-Hint-do-executavel.png)
 
 
 * Se acessarmos as propriedades do .exe, veremos que os dados da versão, e as informações do produto, também seram exibidos na aba Detalhes:
+
+![Propriedades-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Propriedades-do-executavel.png)
