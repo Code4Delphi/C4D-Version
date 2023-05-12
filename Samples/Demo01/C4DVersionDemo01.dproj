@@ -113,6 +113,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_Keys>CompanyName=Code4Delphi - Cursos e conteúdos de Programação Delphi;FileDescription=Code4Delphi Controle de Versão;FileVersion=1.0.0.0;InternalName=Internal Name Code4Delphi;LegalCopyright=Copyright Code4Delphi;LegalTrademarks=https://github.com/Code4Delphi;OriginalFilename=$(MSBuildProjectName);ProductName=Code4Delphi VersionInfo;ProductVersion=1.0.0.0;Comments=contato@code4delphi.com.br;ProgramID=br.com.code4delphi.$(MSBuildProjectName);PreRelease=-alpha.0</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

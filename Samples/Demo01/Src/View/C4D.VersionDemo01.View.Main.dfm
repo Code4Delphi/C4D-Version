@@ -92,7 +92,7 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
     object btnVersaoSistemaAtual: TButton
       Left = 581
       Top = 13
-      Width = 263
+      Width = 220
       Height = 25
       Cursor = crHandPoint
       Caption = 'C4D.VersionInfo - Sistema Atual'
@@ -102,7 +102,7 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
     object btnVersaoSistemaDoEdit01: TButton
       Left = 581
       Top = 41
-      Width = 263
+      Width = 220
       Height = 25
       Cursor = crHandPoint
       Caption = 'C4D.VersionInfo - Sistema do edit'
