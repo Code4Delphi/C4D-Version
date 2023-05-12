@@ -152,7 +152,7 @@ begin
 ```
 
 ## ⌨️ Demo
-* Juntos aos fontes do projetos, você encontrara um projeto teste, na pasta:
+* Junto aos fontes do projeto, você encontrara um projeto teste, na pasta:
 ```
 ..\C4D-Version\Samples\Demo01
 ```
