@@ -6,11 +6,13 @@ uses
 
 {$R *.res}
 
+
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.Title             := 'C4D VersionInfo Title';
-  Application.Hint              := 'C4D VersionInfo Hint';
+  Application.Title := 'C4D VersionInfo Title';
+  Application.Hint := 'C4D VersionInfo Hint';
   Application.CreateForm(TC4DVersionInfoDemo01ViewMain, C4DVersionInfoDemo01ViewMain);
   Application.Run;
+
 end.

@@ -3,7 +3,7 @@ unit C4D.Version.Consts;
 interface
 
 uses
- C4D.Version.Types;
+  C4D.Version.Types;
 
 const
   LanguageValues: array[TVersionLanguage] of Word = ($0401, $0402, $0403,
@@ -20,4 +20,3 @@ const
 implementation
 
 end.
-
