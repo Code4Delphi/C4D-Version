@@ -26,7 +26,7 @@ type
   TRecordVersion = record
     case Integer of
       0: (All: array[1..4] of Word);
-      1: (MS, LS: LongInt);
+      1:(MS, LS: LongInt);
   end;
 
 implementation
