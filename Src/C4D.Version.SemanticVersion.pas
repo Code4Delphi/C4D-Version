@@ -10,17 +10,13 @@ uses
 type
   TC4DVersionSemanticVersion = class
   private
-    class var
-      FInstance: TC4DVersionSemanticVersion;
-  var
     FMajor: Integer;
     FMinor: Integer;
     FPatch: Integer;
     FPreRelease: string;
-  public
     constructor Create;
+  public
     class function GetInstance: TC4DVersionSemanticVersion;
-    class destructor UnInitialize;
     function GetString: string;
     property Major: Integer read FMajor;
     property Minor: Integer read FMinor;
@@ -30,11 +26,14 @@ type
 
 implementation
 
+var
+  Instance: TC4DVersionSemanticVersion;
+
 class function TC4DVersionSemanticVersion.GetInstance: TC4DVersionSemanticVersion;
 begin
-  if(not Assigned(FInstance))then
-    FInstance := Self.Create;
-  Result := FInstance;
+  if(not Assigned(Instance))then
+    Instance := Self.Create;
+  Result := Instance;
 end;
 
 constructor TC4DVersionSemanticVersion.Create;
@@ -53,10 +52,10 @@ begin
   Result := FMajor.ToString + '.' + FMinor.ToString + '.' + FPatch.ToString + FPreRelease;
 end;
 
-class destructor TC4DVersionSemanticVersion.UnInitialize;
-begin
-  if(Assigned(FInstance))then
-    FreeAndNil(FInstance);
-end;
+initialization
+
+finalization
+  if(Assigned(Instance))then
+    FreeAndNil(Instance);
 
 end.

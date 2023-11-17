@@ -30,6 +30,7 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 0
+    ExplicitTop = 247
   end
   object Panel1: TPanel
     Left = 0
@@ -87,7 +88,7 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
       Width = 531
       Height = 21
       TabOrder = 0
-      Text = 'C:\Program Files (x86)\Embarcadero\Studio\20.0\bin\bds.exe'
+      Text = 'C:\Program Files (x86)\AnyDesk\AnyDesk.exe'
     end
     object btnVersaoSistemaAtual: TButton
       Left = 581

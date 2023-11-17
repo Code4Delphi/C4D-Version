@@ -121,36 +121,40 @@ procedure TC4DVersionInfoDemo01ViewMain.GetDadosVersaoSistema(const AFileName: s
 var
   LVersao: IC4DVersionInfo;
 begin
+  if(not AFileName.Trim.IsEmpty)then
+    if(not FileExists(AFileName))then
+      raise Exception.Create('Exe não encontrado: ' + sLineBreak + AFileName);
+
   if(ckLogLimparACadaBusca.Checked)then
     btnLimparLog.Click;
 
   LVersao := TC4DVersion.Info(AFileName);
-  Memo1.Lines.Add('GetFileName:           ' + LVersao.GetFileName);
-  Memo1.Lines.Add('FileDescription:       ' + LVersao.FileDescription);
-  Memo1.Lines.Add('VersionShort:          ' + LVersao.VersionShort);
-  Memo1.Lines.Add('VersionLong:           ' + LVersao.VersionLong);
-  Memo1.Lines.Add('VersionMajor:          ' + LVersao.VersionMajor.ToString);
-  Memo1.Lines.Add('VersionMinor:          ' + LVersao.VersionMinor.ToString);
-  Memo1.Lines.Add('VersionPatch:          ' + LVersao.VersionPatch.ToString);
-  Memo1.Lines.Add('PreRelease:            ' + BoolToStr(LVersao.PreRelease, True));
-  Memo1.Lines.Add('VersionPreRelease:     ' + LVersao.VersionPreRelease);
-  Memo1.Lines.Add('VersionNum:            ' + LVersao.VersionNum.ToString);
-  Memo1.Lines.Add('ProductName:           ' + LVersao.ProductName);
-  Memo1.Lines.Add('VersionProductShort:   ' + LVersao.VersionProductShort);
-  Memo1.Lines.Add('VersionProductLong:    ' + LVersao.VersionProductLong);
-  Memo1.Lines.Add('Comments:              ' + LVersao.Comments);
-  Memo1.Lines.Add('CompanyName:           ' + LVersao.CompanyName);
-  Memo1.Lines.Add('InternalName:          ' + LVersao.InternalName);
-  Memo1.Lines.Add('LegalCopyright:        ' + LVersao.LegalCopyright);
-  Memo1.Lines.Add('LegalTrademarks:       ' + LVersao.LegalTrademarks);
-  Memo1.Lines.Add('OriginalFilename:      ' + LVersao.OriginalFilename);
-  Memo1.Lines.Add('TranslationString:     ' + LVersao.TranslationString);
-  Memo1.Lines.Add('VerFileDate:           ' + DateTimeToStr(LVersao.VerFileDate));
-  Memo1.Lines.Add('SpecialBuild:          ' + LVersao.SpecialBuild);
-  Memo1.Lines.Add('PrivateBuild:          ' + LVersao.PrivateBuild);
-  Memo1.Lines.Add('DebugBuild:            ' + BoolToStr(LVersao.DebugBuild, True));
-  Memo1.Lines.Add('Patched:               ' + BoolToStr(LVersao.Patched, True));
-  Memo1.Lines.Add('InfoInferred:          ' + BoolToStr(LVersao.InfoInferred, True));
+  Memo1.Lines.Add('GetFileName:' + LVersao.GetFileName);
+  Memo1.Lines.Add('FileDescription:' + LVersao.FileDescription);
+  Memo1.Lines.Add('VersionShort: ' + LVersao.VersionShort);
+  Memo1.Lines.Add('VersionLong: ' + LVersao.VersionLong);
+  Memo1.Lines.Add('VersionMajor: ' + LVersao.VersionMajor.ToString);
+  Memo1.Lines.Add('VersionMinor: ' + LVersao.VersionMinor.ToString);
+  Memo1.Lines.Add('VersionPatch: ' + LVersao.VersionPatch.ToString);
+  Memo1.Lines.Add('PreRelease: ' + BoolToStr(LVersao.PreRelease, True));
+  Memo1.Lines.Add('VersionPreRelease: ' + LVersao.VersionPreRelease);
+  Memo1.Lines.Add('VersionNum: ' + LVersao.VersionNum.ToString);
+  Memo1.Lines.Add('ProductName: ' + LVersao.ProductName);
+  Memo1.Lines.Add('VersionProductShort: ' + LVersao.VersionProductShort);
+  Memo1.Lines.Add('VersionProductLong: ' + LVersao.VersionProductLong);
+  Memo1.Lines.Add('Comments: ' + LVersao.Comments);
+  Memo1.Lines.Add('CompanyName: ' + LVersao.CompanyName);
+  Memo1.Lines.Add('InternalName: ' + LVersao.InternalName);
+  Memo1.Lines.Add('LegalCopyright: ' + LVersao.LegalCopyright);
+  Memo1.Lines.Add('LegalTrademarks: ' + LVersao.LegalTrademarks);
+  Memo1.Lines.Add('OriginalFilename: ' + LVersao.OriginalFilename);
+  Memo1.Lines.Add('TranslationString: ' + LVersao.TranslationString);
+  Memo1.Lines.Add('VerFileDate: ' + DateTimeToStr(LVersao.VerFileDate));
+  Memo1.Lines.Add('SpecialBuild: ' + LVersao.SpecialBuild);
+  Memo1.Lines.Add('PrivateBuild: ' + LVersao.PrivateBuild);
+  Memo1.Lines.Add('DebugBuild: ' + BoolToStr(LVersao.DebugBuild, True));
+  Memo1.Lines.Add('Patched: ' + BoolToStr(LVersao.Patched, True));
+  Memo1.Lines.Add('InfoInferred: ' + BoolToStr(LVersao.InfoInferred, True));
   Memo1.Lines.Add(StringOfChar('-', 150));
 end;
 
@@ -159,10 +163,10 @@ begin
   if(ckLogLimparACadaBusca.Checked)then
     btnLimparLog.Click;
 
-  Memo1.Lines.Add('Major:           ' + TC4DVersion.SemanticVersion.Major.ToString);
-  Memo1.Lines.Add('Minor:           ' + TC4DVersion.SemanticVersion.Minor.ToString);
-  Memo1.Lines.Add('Patch:           ' + TC4DVersion.SemanticVersion.Patch.ToString);
-  Memo1.Lines.Add('PreRelease:      ' + TC4DVersion.SemanticVersion.PreRelease);
+  Memo1.Lines.Add('Major: ' + TC4DVersion.SemanticVersion.Major.ToString);
+  Memo1.Lines.Add('Minor: ' + TC4DVersion.SemanticVersion.Minor.ToString);
+  Memo1.Lines.Add('Patch: ' + TC4DVersion.SemanticVersion.Patch.ToString);
+  Memo1.Lines.Add('PreRelease: ' + TC4DVersion.SemanticVersion.PreRelease);
   Memo1.Lines.Add('SemanticVersion: ' + TC4DVersion.SemanticVersion.GetString);
   Memo1.Lines.Add(StringOfChar('-', 150));
 end;
