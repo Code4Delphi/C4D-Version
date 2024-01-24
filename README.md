@@ -185,4 +185,7 @@ begin
 ![Propriedades-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Propriedades-do-executavel.png)
 
 
+> [!TIP]
+> Você pode usar o C4D-Version para criação de um atualizador, esse atualizador acessaria a versão do .exe do seu sistema, e com base nos dados faria as atualizações necessárias.
+
 [Voltar ao topo](#alterar-idioma)
