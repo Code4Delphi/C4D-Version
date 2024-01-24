@@ -67,7 +67,8 @@ uses
   C4D.Version;
 ```
 
-* Adicionando os dados da **versão do sistema** em um TMemo:
+## 📝 Dados completos sobre a versão
+* Adicionando os dados da **versão do sistema atual** em um TMemo:
 ```
 var
  LVersao: IC4DVersionInfo;
@@ -102,7 +103,7 @@ begin
    Memo1.Lines.Add('InfoInferred:          ' + BoolToStr(LVersao.InfoInferred, True));
 end;
 ```
-Veja como ficaria o retorno:
+* Veja como ficaria o retorno:
 ```
 GetFileName:           C:\Componentes-Delphi\Code4D\C4D-Version\Samples\Demo01\Win32\Debug\C4DVersionDemo01.exe
 FileDescription:       Code4Delphi Controle de Versão
@@ -132,33 +133,36 @@ Patched:               False
 InfoInferred:          False
 ```
 
-* Adicionando apenas os dados do **Semantic Version** do sistema em um TMemo:
+
+## 🆚 Versionamento semântico (Semantic versioning)
+* Adicionando apenas os dados do **Semantic versioning** do sistema em um TMemo:
 ```
 begin
    Memo1.Lines.Clear;
-   Memo1.Lines.Add('Major:           ' + TC4DVersion.SemanticVersion.Major.ToString);
-   Memo1.Lines.Add('Minor:           ' + TC4DVersion.SemanticVersion.Minor.ToString);
-   Memo1.Lines.Add('Patch:           ' + TC4DVersion.SemanticVersion.Patch.ToString);
-   Memo1.Lines.Add('PreRelease:      ' + TC4DVersion.SemanticVersion.PreRelease);
-   Memo1.Lines.Add('SemanticVersion: ' + TC4DVersion.SemanticVersion.GetString);
+   Memo1.Lines.Add('Major: ' + TC4DVersion.SemanticVersion.Major.ToString);
+   Memo1.Lines.Add('Minor: ' + TC4DVersion.SemanticVersion.Minor.ToString);
+   Memo1.Lines.Add('Patch: ' + TC4DVersion.SemanticVersion.Patch.ToString);
+   Memo1.Lines.Add('PreRelease:  ' + TC4DVersion.SemanticVersion.PreRelease);
+   Memo1.Lines.Add('Semantic versioning complete: ' + TC4DVersion.SemanticVersion.GetString);
 end;
 ```
-Veja como ficaria o retorno:
+* Veja como ficaria o retorno:
 ```
-Major:           1
-Minor:           0
-Patch:           0
+Major: 1
+Minor: 0
+Patch: 0
 PreRelease:      
 SemanticVersion: 1.0.0
 ```
 
 
-* Também é possível, acessar os dados de outros .exe, para isso basta passar o caminho do .exe como parâmetro ao chamar o método: TC4DVersion.Info(). Veja como fariamos para recuperar os dados do .exe do próprio Delphi:
+## 🖥 Acessando dados de outros .exe
+* Também é possível, acessar os dados de outros .exe, para isso basta passar o caminho do .exe como parâmetro ao chamar o método: TC4DVersion.Info(). Veja como fariamos para recuperar os dados do .exe da calculadora do Windows:
 ``` 
 var
   LVersao: IC4DVersionInfo;
 begin
-  LVersao := TC4DVersion.Info('C:\Program Files (x86)\Embarcadero\Studio\20.0\bin\bds.exe');
+  LVersao := TC4DVersion.Info('C:\Windows\System32\calc.exe');
 ```
 
 ## ⌨️ Demo
@@ -170,7 +174,7 @@ begin
 
 
 
-## ⭐ Vantagens em se utilizar o Version Info do Delphi
+## ✅ Vantagens em se utilizar o Version Info do Delphi:
 * Os dados da versão são inseridos no .exe, como isso ao repousar o mouse sobre nosso arquivos .exe, os dados da versão e informações do produto são exibidos:
 
 ![Dados-da-versao-no-Hint-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Dados-da-versao-no-Hint-do-executavel.png)
