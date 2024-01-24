@@ -190,4 +190,4 @@ begin
 > You can use C4D-Version to create an updater, this updater would access the .exe version of your system, and based on the data, make the necessary updates.
 
 
-[Voltar ao topo](#alterar-idioma)
+[Back to top](#change-the-language)
