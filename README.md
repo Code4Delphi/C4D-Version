@@ -1,8 +1,8 @@
 #  C4D-Version - Controle a versão do seu sistema
 <p align="center">
-  <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Img/C4D-Logo.png">
-    <img alt="Horse" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Img/c4d-logo-100x100.png">
-  </a>  
+  <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
+    <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
+  </a> 
 </p>
 Com o C4D-Version, você pode fazer o controle da versão do seu sistema através do Version Info da própria IDE do Delphi. 
 
@@ -11,7 +11,7 @@ Com o C4D-Version, você pode fazer o controle da versão do seu sistema atravé
 ## 📞 Contacts
 
 <p align="left">
-  <a href="https://t.me/Code4DelphiDevs" target="_blank">
+  <a href="https://t.me/Code4Delphi" target="_blank">
     <img src="https://img.shields.io/badge/Telegram:-Join%20Channel-blue?logo=telegram">
   </a> 
   &nbsp;
