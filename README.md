@@ -57,7 +57,7 @@ boss install github.com/Code4Delphi/C4D-Version
 
 
 ## 🚀 Como usar
-* Adcione os dados da versão do seu sistema, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
+* Adicione os dados da versão do seu sistema, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
 
 ![Tela-Version-Info-Delphi.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Version-Info-Delphi.png)
 
