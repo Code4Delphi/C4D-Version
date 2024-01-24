@@ -2,7 +2,7 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
   Left = 0
   Top = 0
   Caption = 'Code4Delphi - VersionInfo - Demo'
-  ClientHeight = 642
+  ClientHeight = 651
   ClientWidth = 964
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,14 +13,13 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
   OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo
     Left = 0
-    Top = 249
+    Top = 235
     Width = 964
-    Height = 393
+    Height = 416
     Align = alClient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -31,12 +30,13 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
     ScrollBars = ssVertical
     TabOrder = 0
     ExplicitTop = 247
+    ExplicitHeight = 393
   end
   object Panel1: TPanel
     Left = 0
-    Top = 215
+    Top = 203
     Width = 964
-    Height = 34
+    Height = 32
     Align = alTop
     BevelOuter = bvLowered
     Padding.Left = 2
@@ -48,12 +48,13 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
       Left = 3
       Top = 3
       Width = 118
-      Height = 28
+      Height = 26
       Cursor = crHandPoint
       Align = alLeft
       Caption = 'Limpar log'
       TabOrder = 0
       OnClick = btnLimparLogClick
+      ExplicitHeight = 28
     end
     object ckLogLimparACadaBusca: TCheckBox
       Left = 126
@@ -69,50 +70,40 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Top = 83
+    Top = 135
     Width = 964
-    Height = 80
+    Height = 68
     Align = alTop
-    Caption = ' Usando a interface IC4DVersionInfo'
+    Caption = ' Acessando dados de outros programas '
     TabOrder = 2
     object Label1: TLabel
       Left = 18
-      Top = 29
+      Top = 20
       Width = 43
       Height = 13
       Caption = 'Path exe'
     end
     object edtPathExe01: TEdit
       Left = 19
-      Top = 43
+      Top = 34
       Width = 531
       Height = 21
       TabOrder = 0
-      Text = 'C:\Program Files (x86)\AnyDesk\AnyDesk.exe'
-    end
-    object btnVersaoSistemaAtual: TButton
-      Left = 581
-      Top = 13
-      Width = 220
-      Height = 25
-      Cursor = crHandPoint
-      Caption = 'C4D.VersionInfo - Sistema Atual'
-      TabOrder = 1
-      OnClick = btnVersaoSistemaAtualClick
+      Text = 'C:\Windows\System32\calc.exe'
     end
     object btnVersaoSistemaDoEdit01: TButton
       Left = 581
-      Top = 41
-      Width = 220
+      Top = 32
+      Width = 200
       Height = 25
       Cursor = crHandPoint
-      Caption = 'C4D.VersionInfo - Sistema do edit'
-      TabOrder = 2
+      Caption = 'Dados da vers'#227'o'
+      TabOrder = 1
       OnClick = btnVersaoSistemaDoEdit01Click
     end
     object btnBuscarExe: TButton
       Left = 552
-      Top = 41
+      Top = 32
       Width = 26
       Height = 25
       Cursor = crHandPoint
@@ -120,29 +111,45 @@ object C4DVersionInfoDemo01ViewMain: TC4DVersionInfoDemo01ViewMain
       Caption = '...'
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 3
+      TabOrder = 2
       OnClick = btnBuscarExeClick
     end
   end
   object GroupBox2: TGroupBox
     Left = 0
-    Top = 163
+    Top = 83
     Width = 964
     Height = 52
     Align = alTop
-    Caption = ' SemanticVersion '
+    Caption = ' Dados do programa atual '
+    Padding.Left = 5
+    Padding.Bottom = 5
     TabOrder = 3
+    ExplicitTop = 84
     object btnSemanticVersion: TButton
-      Left = 3
-      Top = 19
-      Width = 430
-      Height = 25
+      Left = 207
+      Top = 15
+      Width = 200
+      Height = 30
       Cursor = crHandPoint
-      Caption = 
-        'Pegar somente SemanticVersion (Sempre do .exe onde estiver sendo' +
-        ' usado)'
+      Align = alLeft
+      Caption = 'Somente  Semantic versioning'
       TabOrder = 0
       OnClick = btnSemanticVersionClick
+      ExplicitLeft = 137
+    end
+    object btnVersaoSistemaAtual: TButton
+      Left = 7
+      Top = 15
+      Width = 200
+      Height = 30
+      Cursor = crHandPoint
+      Align = alLeft
+      Caption = 'Dados da vers'#227'o'
+      TabOrder = 1
+      OnClick = btnVersaoSistemaAtualClick
+      ExplicitLeft = 8
+      ExplicitTop = 14
     end
   end
   object GroupBox3: TGroupBox
