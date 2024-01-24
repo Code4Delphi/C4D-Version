@@ -11,9 +11,10 @@ uses
   Vcl.Graphics,
   Vcl.Controls,
   Vcl.Forms,
-  Vcl.Dialogs,
   Vcl.StdCtrls,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls,
+  Utils,
+  C4D.Version;
 
 type
   TC4DVersionInfoDemo01ViewMain = class(TForm)
@@ -23,7 +24,6 @@ type
     GroupBox1: TGroupBox;
     Label1: TLabel;
     edtPathExe01: TEdit;
-    btnVersaoSistemaAtual: TButton;
     btnVersaoSistemaDoEdit01: TButton;
     GroupBox2: TGroupBox;
     btnSemanticVersion: TButton;
@@ -31,15 +31,14 @@ type
     ckLogLimparACadaBusca: TCheckBox;
     GroupBox3: TGroupBox;
     Memo2: TMemo;
-    procedure FormCreate(Sender: TObject);
+    btnVersaoSistemaAtual: TButton;
     procedure btnLimparLogClick(Sender: TObject);
     procedure btnVersaoSistemaDoEdit01Click(Sender: TObject);
     procedure btnVersaoSistemaAtualClick(Sender: TObject);
     procedure btnSemanticVersionClick(Sender: TObject);
     procedure btnBuscarExeClick(Sender: TObject);
   private
-    procedure GetDadosVersaoSistema(const AFileName: string = '');
-    function SelectFile(const ADefaultFile: string; const ADefaultExt: string = 'exe'): string;
+    procedure GetDadosVersaoSistema(const AFileName: string);
   public
   end;
 
@@ -48,52 +47,11 @@ var
 
 implementation
 
-uses
-  C4D.Version;
-
 {$R *.dfm}
-
-procedure TC4DVersionInfoDemo01ViewMain.FormCreate(Sender: TObject);
-begin
-  ReportMemoryLeaksOnShutdown := True;
-end;
 
 procedure TC4DVersionInfoDemo01ViewMain.btnBuscarExeClick(Sender: TObject);
 begin
-  edtPathExe01.Text := Self.SelectFile(edtPathExe01.Text);
-end;
-
-function TC4DVersionInfoDemo01ViewMain.SelectFile(const ADefaultFile: string; const ADefaultExt: string = 'exe'): string;
-var
-  LOpenDialog: TOpenDialog;
-  LFolder: string;
-begin
-  LOpenDialog := TOpenDialog.Create(nil);
-  try
-    LOpenDialog.Title := 'C4D - Select a file';
-    if(not ADefaultFile.Trim.IsEmpty)then
-    begin
-      LFolder := ExtractFilePath(ADefaultFile);
-      if(System.SysUtils.DirectoryExists(LFolder))then
-        LOpenDialog.InitialDir := LFolder;
-
-      if(System.SysUtils.FileExists(ADefaultFile))then
-        LOpenDialog.FileName := ExtractFileName(ADefaultFile);
-    end;
-
-    if(not ADefaultExt.Trim.IsEmpty)then
-    begin
-      LOpenDialog.DefaultExt := ADefaultExt;
-      LOpenDialog.Filter := Format('Arquivo %s|*.%s', [ADefaultExt.ToUpper, ADefaultExt]);
-    end;
-
-    if(not LOpenDialog.Execute)then
-      Exit(ADefaultFile);
-
-    Result := LOpenDialog.FileName;
-  finally
-    LOpenDialog.Free;
-  end;
+  edtPathExe01.Text := TUtils.SelectFile(edtPathExe01.Text);
 end;
 
 procedure TC4DVersionInfoDemo01ViewMain.btnLimparLogClick(Sender: TObject);
@@ -103,7 +61,8 @@ end;
 
 procedure TC4DVersionInfoDemo01ViewMain.btnVersaoSistemaAtualClick(Sender: TObject);
 begin
-  Self.GetDadosVersaoSistema;
+  //NAO INFORMANDO O FILENAME, A BIBLIOTECA RETORNARA OS DADOS DO PROJETO ATUAL
+  Self.GetDadosVersaoSistema('');
 end;
 
 procedure TC4DVersionInfoDemo01ViewMain.btnVersaoSistemaDoEdit01Click(Sender: TObject);
@@ -114,17 +73,16 @@ begin
     raise Exception.Create('Informe o caminho do .exe desejado');
   end;
 
+  if(not FileExists(edtPathExe01.Text))then
+    raise Exception.Create('Exe não encontrado: ' + sLineBreak + edtPathExe01.Text);
+
   Self.GetDadosVersaoSistema(edtPathExe01.Text);
 end;
 
-procedure TC4DVersionInfoDemo01ViewMain.GetDadosVersaoSistema(const AFileName: string = '');
+procedure TC4DVersionInfoDemo01ViewMain.GetDadosVersaoSistema(const AFileName: string);
 var
   LVersao: IC4DVersionInfo;
 begin
-  if(not AFileName.Trim.IsEmpty)then
-    if(not FileExists(AFileName))then
-      raise Exception.Create('Exe não encontrado: ' + sLineBreak + AFileName);
-
   if(ckLogLimparACadaBusca.Checked)then
     btnLimparLog.Click;
 
@@ -155,7 +113,7 @@ begin
   Memo1.Lines.Add('DebugBuild: ' + BoolToStr(LVersao.DebugBuild, True));
   Memo1.Lines.Add('Patched: ' + BoolToStr(LVersao.Patched, True));
   Memo1.Lines.Add('InfoInferred: ' + BoolToStr(LVersao.InfoInferred, True));
-  Memo1.Lines.Add(StringOfChar('-', 150));
+  Memo1.Lines.Add(StringOfChar('-', 130));
 end;
 
 procedure TC4DVersionInfoDemo01ViewMain.btnSemanticVersionClick(Sender: TObject);
@@ -167,8 +125,8 @@ begin
   Memo1.Lines.Add('Minor: ' + TC4DVersion.SemanticVersion.Minor.ToString);
   Memo1.Lines.Add('Patch: ' + TC4DVersion.SemanticVersion.Patch.ToString);
   Memo1.Lines.Add('PreRelease: ' + TC4DVersion.SemanticVersion.PreRelease);
-  Memo1.Lines.Add('SemanticVersion: ' + TC4DVersion.SemanticVersion.GetString);
-  Memo1.Lines.Add(StringOfChar('-', 150));
+  Memo1.Lines.Add('Semantic versioning complete: ' + TC4DVersion.SemanticVersion.GetString);
+  Memo1.Lines.Add(StringOfChar('-', 130));
 end;
 
 end.

@@ -2,12 +2,14 @@ program C4DVersionDemo01;
 
 uses
   Vcl.Forms,
-  C4D.VersionDemo01.View.Main in 'Src\View\C4D.VersionDemo01.View.Main.pas' {C4DVersionInfoDemo01ViewMain};
+  C4D.VersionDemo01.View.Main in 'Src\View\C4D.VersionDemo01.View.Main.pas' {C4DVersionInfoDemo01ViewMain},
+  Utils in 'Src\Utils\Utils.pas';
 
 {$R *.res}
 
 
 begin
+  ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.Title := 'C4D VersionInfo Title';
