@@ -183,3 +183,6 @@ begin
 * Se acessarmos as propriedades do .exe, veremos que os dados da versão, e as informações do produto, também seram exibidos na aba Detalhes:
 
 ![Propriedades-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Propriedades-do-executavel.png)
+
+
+[Voltar ao topo](#alterar-idioma)
