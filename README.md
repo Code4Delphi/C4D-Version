@@ -1,3 +1,8 @@
+### Alterar idioma
+[![Static Badge](https://img.shields.io/badge/Portugu%C3%AAs-(ptBR)-green)](https://github.com/Code4Delphi/C4D-Version)
+[![Static Badge](https://img.shields.io/badge/English-(en)-red)](https://github.com/Code4Delphi/C4D-Version/blob/master/README.en.md)
+
+
 #  C4D-Version - Controle a versão do seu sistema
 <p align="center">
   <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
@@ -8,25 +13,30 @@ Com o C4D-Version, você pode fazer o controle da versão do seu sistema atravé
 
 
 
-## 📞 Contacts
+## 📞 Contatos
 
 <p align="left">
   <a href="https://t.me/Code4Delphi" target="_blank">
     <img src="https://img.shields.io/badge/Telegram:-Join%20Channel-blue?logo=telegram">
+  </a>   
+   &nbsp;
+  <a href="https://www.youtube.com/@code4delphi" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube:-Join%20Channel-red?logo=youtube&logoColor=red">
+  </a> 
+   &nbsp;
+  <a href="https://www.linkedin.com/in/cesar-cardoso-dev" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn:-Follow-blue?logo=LinkedIn&logoColor=blue">
   </a> 
   &nbsp;
   <a href="mailto:contato@code4delphi.com.br" target="_blank">
     <img src="https://img.shields.io/badge/E--mail-contato%40code4delphi.com.br-yellowgreen?logo=maildotru&logoColor=yellowgreen">
   </a>
-   &nbsp;
-  <a href="https://go.hotmart.com/U81331747Y?dp=1" target="_blank">
-    <img src="https://img.shields.io/badge/Course:-Open%20Tools%20API-F00?logo=delphi">
-  </a> 
-   &nbsp;
-  <a href="https://www.youtube.com/@code4delphi" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube:-Join%20Channel-red?logo=youtube&logoColor=red">
-  </a> 
 </p>
+
+<br/>
+
+> [!IMPORTANT]
+> ### ⭐ Não se esqueça de deixar sua estrela para ajudar a propagar o repositório.
 
 
 
@@ -143,12 +153,12 @@ SemanticVersion: 1.0.0
 ```
 
 
-* Também é possível, acessar os dados de outros .exe, para isso basta passar o caminho do .exe como parâmetro ao char o método: TC4DVersion.Info(). Veja como fariamos para recuperar os dados do .exe do próprio Delphi:
+* Também é possível, acessar os dados de outros .exe, para isso basta passar o caminho do .exe como parâmetro ao chamar o método: TC4DVersion.Info(). Veja como fariamos para recuperar os dados do .exe do próprio Delphi:
 ``` 
 var
- LVersao: IC4DVersionInfo;
+  LVersao: IC4DVersionInfo;
 begin
-   LVersao := TC4DVersion.Info('C:\Program Files (x86)\Embarcadero\Studio\20.0\bin\bds.exe');
+  LVersao := TC4DVersion.Info('C:\Program Files (x86)\Embarcadero\Studio\20.0\bin\bds.exe');
 ```
 
 ## ⌨️ Demo
