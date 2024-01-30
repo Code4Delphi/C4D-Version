@@ -9,7 +9,7 @@
     <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
   </a> 
 </p>
-Com o C4D-Version, você pode fazer o controle da versão do seu sistema através do Version Info da própria IDE do Delphi. 
+Com o C4D-Version, você pode fazer o controle da versão do seu sistema através do Version Info do próprio IDE do Delphi. 
 
 
 
