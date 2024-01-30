@@ -3,14 +3,14 @@
 [![Static Badge](https://img.shields.io/badge/English-(en)-red)](https://github.com/Code4Delphi/C4D-Version/blob/master/README.en.md)
 
 
-#  C4D-Version - Control your system version
-<p align="center">
+# C4D-Version - Control the versions of your applications
+<!--<p align="center">
   <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
     <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
   </a> 
-</p>
-With C4D-Version, you can control the version of your system through the Version Info of the Delphi IDE itself.
+</p> -->
 
+With C4D-Version, we can control the versions of our applications, or any other application, in an easy and professional way, through the **Version Info** of the Delphi IDE itself.
 
 
 ## 📞 Contacts
@@ -57,7 +57,7 @@ boss install github.com/Code4Delphi/C4D-Version
 
 
 ## 🚀 Quickstart
-* Add your system version data by going to *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
+* We can define and control the version data of our applications directly through Delphi. Just access the menu *Project > Options... (or Shift+Ctrl+F11) > Application > Version Info*
 
 ![Tela-Version-Info-Delphi.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Version-Info-Delphi.png)
 
@@ -185,9 +185,10 @@ begin
 ![Propriedades-do-executavel.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Propriedades-do-executavel.png)
 
 
-
 > [!TIP]
-> You can use C4D-Version to create an updater, this updater would access the .exe version of your system, and based on the data, make the necessary updates.
+> You can use C4D-Version to create an updater, this updater would access the .exe version of your application, and based on the data, make the necessary updates.
 
+> [!IMPORTANT]
+> ### ⭐ Don't forget to leave your star to help propagate the repository.
 
 [Back to top](#change-the-language)
