@@ -3,15 +3,13 @@
 [![Static Badge](https://img.shields.io/badge/English-(en)-red)](https://github.com/Code4Delphi/C4D-Version/blob/master/README.en.md)
 
 
-#  C4D-Version - Controle a versão do seu sistema
+#  C4D-Version - Controle as versões de suas aplicações
 <p align="center">
   <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
     <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
   </a> 
 </p>
-Com o C4D-Version, você pode fazer o controle da versão do seu sistema através do Version Info do próprio IDE do Delphi. 
-
-
+Com o C4D-Version, você pode fazer o controle das versões de suas aplicações, de uma forma muito fácil e profissional, através do Version Info do próprio IDE do Delphi. 
 
 ## 📞 Contatos
 
@@ -35,11 +33,6 @@ Com o C4D-Version, você pode fazer o controle da versão do seu sistema atravé
 
 <br/>
 
-> [!IMPORTANT]
-> ### ⭐ Não se esqueça de deixar sua estrela para ajudar a propagar o repositório.
-
-
-
 ## ⚙️ Instalação
 
 * Instalação usando o [**Boss**](https://github.com/HashLoad/boss):
@@ -57,18 +50,18 @@ boss install github.com/Code4Delphi/C4D-Version
 
 
 ## 🚀 Como usar
-* Adicione os dados da versão do seu sistema, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
+* Adicione os dados da versão da sua aplicação, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
 
 ![Tela-Version-Info-Delphi.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Version-Info-Delphi.png)
 
-* Adicione a uses a seu sistema:
+* Adicione a uses a sua aplicação:
 ```
 uses
   C4D.Version;
 ```
 
 ## 📝 Dados completos sobre a versão
-* Adicionando os dados da **versão do sistema atual** em um TMemo:
+* Adicionando os dados da **versão da aplicação atual** em um TMemo:
 ```
 var
  LVersao: IC4DVersionInfo;
@@ -135,7 +128,7 @@ InfoInferred:          False
 
 
 ## 🆚 Versionamento semântico (Semantic versioning)
-* Adicionando apenas os dados do **Semantic versioning** do sistema em um TMemo:
+* Adicionando apenas os dados do **Semantic versioning** da aplicação em um TMemo:
 ```
 begin
    Memo1.Lines.Clear;
@@ -186,6 +179,9 @@ begin
 
 
 > [!TIP]
-> Você pode usar o C4D-Version para criação de um atualizador, esse atualizador acessaria a versão do .exe do seu sistema, e com base nos dados faria as atualizações necessárias.
+> Você pode usar o C4D-Version para criação de um atualizador, esse atualizador acessaria a versão do .exe do sua aplicação, e com base nos dados faria as atualizações necessárias.
+
+> [!IMPORTANT]
+> ### ⭐ Não se esqueça de deixar sua estrela para ajudar a propagar o repositório.
 
 [Voltar ao topo](#alterar-idioma)
