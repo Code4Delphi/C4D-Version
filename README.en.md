@@ -35,9 +35,10 @@ With C4D-Version, we can control the versions of our applications, or any other 
 
 <br/>
 
-> [!IMPORTANT]
-> ### ⭐ Don't forget to leave your star to help propagate the directory.
+## ▶️ Demo video
+* [Access demo video](https://www.youtube.com/watch?v=nl2cBL-9VSs&list=PLLHSz4dOnnN1Hx0KtSwqN1Ory9HP7IDJn&index=4)
 
+<br/>
 
 
 ## ⚙️ Installation
