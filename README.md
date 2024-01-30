@@ -4,12 +4,13 @@
 
 
 #  C4D-Version - Controle as versões de suas aplicações
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
     <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
   </a> 
-</p>
-Com o C4D-Version, você pode fazer o controle das versões de suas aplicações, de uma forma muito fácil e profissional, através do Version Info do próprio IDE do Delphi. 
+</p> -->
+
+Com o C4D-Version, conseguimos controlar as versões de nossas aplicações, ou de qualquer outra aplicação, de uma forma fácil e profissional, através do **Version Info** do próprio IDE do Delphi.
 
 ## 📞 Contatos
 
@@ -50,7 +51,7 @@ boss install github.com/Code4Delphi/C4D-Version
 
 
 ## 🚀 Como usar
-* Adicione os dados da versão da sua aplicação, acessando *Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info*
+* Podemos definir e controlar os dados das versões de nossas aplicações diretamente pelo Delphi. Basta acessar o menu Project > Options... (ou Shift+Ctrl+F11) > Application > Version Info.
 
 ![Tela-Version-Info-Delphi.png](https://github.com/Code4Delphi/C4D-Version/blob/master/Img/Readme/Tela-Version-Info-Delphi.png)
 
